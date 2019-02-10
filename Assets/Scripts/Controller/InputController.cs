@@ -5,6 +5,7 @@ namespace Geekbrains
 	public class InputController : BaseController
 	{
 		private KeyCode _codeFlashLight = KeyCode.F;
+
 		public override void OnUpdate()
 		{
 			if (!IsActive) return;
