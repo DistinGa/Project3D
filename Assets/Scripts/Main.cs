@@ -10,6 +10,7 @@ namespace Geekbrains
 		public InputController InputController { get; private set; }
 		public PlayerController PlayerController { get; private set; }
         public WeaponController WeaponController { get; private set; }
+        public EnemyController EnemyController { get; private set; }
 
         private List<BaseController> Controllers;
 
@@ -37,15 +38,17 @@ namespace Geekbrains
 			FlashLightController = new FlashLightController();
 			InputController = new InputController();
 			InputController.On();
-
-
             WeaponController = new WeaponController();
             WeaponController.On(Arsenal.WeaponsList[0]);
+            EnemyController = new EnemyController();
+            EnemyController.On();
+
             Controllers = new List<BaseController>();
 			Controllers.Add(FlashLightController);
 			Controllers.Add(InputController);
 			Controllers.Add(PlayerController);
 			Controllers.Add(WeaponController);
+			Controllers.Add(EnemyController);
 		}
 
 		private void Update()

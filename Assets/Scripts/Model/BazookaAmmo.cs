@@ -37,19 +37,24 @@ namespace Geekbrains
             var colliders = Physics.OverlapSphere(Transform.position, _explosionRadius);
             foreach (var item in colliders)
             {
-                var victim = item.GetComponent<IDamagable>();
+                var victim = item.gameObject.GetComponentInParent<IDamagable>();
                 victim?.ApplyDamage(_damage, item.transform.position, Vector3.zero);
             }
 
             if (_explosion != null)
             {
+                float _destroyDelay = 0.2f;
                 _explosion.transform.parent = null;
                 if (_explosionAudioSource != null)
+                {
                     _explosionAudioSource.pitch = Random.Range(0.9f, 1.1f);
+                    _destroyDelay = _explosionAudioSource.clip.length;
+                }
 
                 _explosion.explosionForce = _explosionForce;
                 _explosion.explosionRadius = _explosionRadius;
                 _explosion.gameObject.SetActive(true);
+                Destroy(_explosion.gameObject, _destroyDelay);
             }
         }
     }

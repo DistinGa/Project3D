@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Geekbrains
 {
-    class Victim : BaseObjectScene, IDamagable
+    class Victim : BaseObjectScene, IDamagable, IEnemy
     {
         public float HP = 100f;
 
@@ -52,6 +52,11 @@ namespace Geekbrains
            }
 
             Destroy(gameObject);
+        }
+
+        public void OnUpdate()
+        {
+            // Кубики просто лежат для красоты :)
         }
     }
 }

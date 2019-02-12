@@ -59,10 +59,9 @@ namespace Geekbrains
                     AmmoInClip--;
                     Invoke("DoFireDelay", _fireDelay);
 
-                    if (AmmoInClip == 0)
+                    if (AmmoInClip == 0 && _autoRechargable)
                     {
-                        if (_autoRechargable)
-                            Recharge();
+                        Recharge();
                     }
                 }
                 else

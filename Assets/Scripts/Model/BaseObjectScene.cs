@@ -44,6 +44,12 @@ namespace Geekbrains
         /// <param name="value"></param>
         protected virtual void SetPhysics(bool value)
         {
+            if (Rigidbody == null)
+            {
+                gameObject.AddComponent<Rigidbody>();
+                Rigidbody = GetComponent<Rigidbody>();
+            }
+
             Rigidbody.isKinematic = !value;
             foreach (var item in GetComponents<Collider>())
             {
