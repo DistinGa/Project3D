@@ -17,6 +17,8 @@ namespace Geekbrains
         private NavMeshAgent _agent;
         private Transform _playerTransform;
 
+        public bool IsHeeling { get; set; }
+
         public override void Init()
         {
             _agent = GetComponent<NavMeshAgent>();
@@ -41,29 +43,36 @@ namespace Geekbrains
                 return false;
             }
 
-            float _distanceToTarget = (_playerTransform.position - transform.position).magnitude;
-
-            if (_distanceToTarget <= CloseDistance)
-                return TargetLock(_playerTransform.position);
-
-            if (_distanceToTarget <= FarDistance)
+            if (IsHeeling)
             {
-                if (Vector3.Angle(_playerTransform.position - transform.position, transform.forward) < VisionAngle * 0.5f)
+                _agent.SetDestination(Main.Instance.HealthPacksController.GetNearestHealthPack(transform.position));
+            }
+            else
+            {
+                float _distanceToTarget = (_playerTransform.position - transform.position).magnitude;
+
+                if (_distanceToTarget <= CloseDistance)
+                    return TargetLock(_playerTransform.position);
+
+                if (_distanceToTarget <= FarDistance)
                 {
-                    RaycastHit hit;
-                    if (Physics.Linecast(transform.position, _playerTransform.position, out hit) && hit.collider.tag != "Player")
-                        return false;
-                    else
+                    if (Vector3.Angle(_playerTransform.position - transform.position, transform.forward) < VisionAngle * 0.5f)
                     {
-                        // Если цель близко к конечной точке расчитанного маршрута, маршрут не пересчитываем.
-                        if ((_agent.pathEndPosition - _playerTransform.position).magnitude < CloseDistance)
-                        {
-                            return true;
-                        }
+                        RaycastHit hit;
+                        if (Physics.Linecast(transform.position, _playerTransform.position, out hit) && hit.collider.tag != "Player")
+                            // Есть препятствие на пути - цель как-будто не видна.
+                            return false;
                         else
                         {
- print("Вижу цель");
-                            return TargetLock(_playerTransform.position);
+                            // Если цель близко к конечной точке расчитанного маршрута, маршрут не пересчитываем.
+                            if ((_agent.pathEndPosition - _playerTransform.position).magnitude < CloseDistance)
+                            {
+                                return true;
+                            }
+                            else
+                            {
+                                return TargetLock(_playerTransform.position);
+                            }
                         }
                     }
                 }
@@ -72,7 +81,11 @@ namespace Geekbrains
             return false;
         }
 
-
+        /// <summary>
+        /// Построение маршрута до цели.
+        /// </summary>
+        /// <param name="targetPosition"></param>
+        /// <returns></returns>
         private bool TargetLock(Vector3 targetPosition)
         {
             return _agent.SetDestination(targetPosition);

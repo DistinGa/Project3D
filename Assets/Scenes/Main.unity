@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &51127095
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -613,7 +613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &76597490
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -866,7 +866,7 @@ GameObject:
   - component: {fileID: 108489319}
   - component: {fileID: 108489316}
   - component: {fileID: 108489318}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1066,7 +1066,7 @@ GameObject:
   - component: {fileID: 114200459}
   - component: {fileID: 114200458}
   - component: {fileID: 114200457}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1185,7 +1185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &118046128
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1382,7 +1382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &172959575
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1483,7 +1483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &176387489
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1695,7 +1695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &215489434
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1809,7 +1809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &219023099
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1923,7 +1923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &222739231
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2094,7 +2094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &256973798
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2293,7 +2293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &274522013
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2476,7 +2476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &302623441
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2561,7 +2561,7 @@ GameObject:
   - component: {fileID: 313358146}
   - component: {fileID: 313358143}
   - component: {fileID: 313358145}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Foe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2595,7 +2595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93c9f7c787216524cae857f77292e71d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
+  _HP: 100
 --- !u!54 &313358142
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3067,7 +3067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &465163470
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3181,7 +3181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &469256629
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3264,7 +3264,7 @@ GameObject:
   - component: {fileID: 485459621}
   - component: {fileID: 485459625}
   - component: {fileID: 485459624}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3582,7 +3582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &514622373
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3862,7 +3862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &549892271
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4236,7 +4236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &621507934
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4314,7 +4314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 672571025}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4436,7 +4436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &686857818
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4635,7 +4635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &716170549
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5040,7 +5040,7 @@ GameObject:
   - component: {fileID: 825981539}
   - component: {fileID: 825981538}
   - component: {fileID: 825981537}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5130,7 +5130,7 @@ GameObject:
   - component: {fileID: 850421954}
   - component: {fileID: 850421953}
   - component: {fileID: 850421952}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Foe (has path)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5245,7 +5245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93c9f7c787216524cae857f77292e71d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
+  _HP: 100
 --- !u!4 &850421959
 Transform:
   m_ObjectHideFlags: 0
@@ -5358,7 +5358,7 @@ GameObject:
   - component: {fileID: 931850869}
   - component: {fileID: 931850868}
   - component: {fileID: 931850867}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5561,7 +5561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &948370356
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5675,7 +5675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &962344328
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6155,7 +6155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &1108542576
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6354,7 +6354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &1132886680
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6798,7 +6798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &1213757139
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7253,7 +7253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &1315585604
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7669,7 +7669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &1403210361
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7953,7 +7953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &1462566395
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8422,7 +8422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &1542875133
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8737,7 +8737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &1632211400
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8898,7 +8898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &1674624714
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9501,6 +9501,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f197e05a5944340b36658d8abc0faa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HealthPack_prefab: {fileID: 1349784423890810, guid: 773aa4f65c8d6ef4db82521bbed0ae92,
+    type: 2}
 --- !u!4 &1797670852
 Transform:
   m_ObjectHideFlags: 0
@@ -9746,7 +9748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &1852574876
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9860,7 +9862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &1864909572
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9938,7 +9940,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1871598135}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10087,7 +10089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf626b07ee204a4f8f1e0d4d09c8d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  _HP: 100
 --- !u!54 &1921455869
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10393,7 +10395,7 @@ GameObject:
   - component: {fileID: 2000901655}
   - component: {fileID: 2000901654}
   - component: {fileID: 2000901653}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}

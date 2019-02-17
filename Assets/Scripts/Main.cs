@@ -5,12 +5,15 @@ namespace Geekbrains
 {
 	public class Main : MonoBehaviour
 	{
+        public GameObject HealthPack_prefab;
+
         public Arsenal Arsenal { get; private set; }
 		public FlashLightController FlashLightController { get; private set; }
 		public InputController InputController { get; private set; }
 		public PlayerController PlayerController { get; private set; }
         public WeaponController WeaponController { get; private set; }
         public EnemyController EnemyController { get; private set; }
+        public HealthPacksController HealthPacksController { get; private set; }
 
         private List<BaseController> Controllers;
 
@@ -42,6 +45,8 @@ namespace Geekbrains
             WeaponController.On(Arsenal.WeaponsList[0]);
             EnemyController = new EnemyController();
             EnemyController.On();
+            HealthPacksController = new HealthPacksController(3, 50, HealthPack_prefab);
+            //HealthPacksController.On();
 
             Controllers = new List<BaseController>();
 			Controllers.Add(FlashLightController);
@@ -49,6 +54,7 @@ namespace Geekbrains
 			Controllers.Add(PlayerController);
 			Controllers.Add(WeaponController);
 			Controllers.Add(EnemyController);
+			//Controllers.Add(HealthPacksController);
 		}
 
 		private void Update()

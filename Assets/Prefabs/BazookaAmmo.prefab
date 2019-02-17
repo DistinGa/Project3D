@@ -666,7 +666,7 @@ MonoBehaviour:
   _damage: 100
   _mass: 0.01
   _initVelocity: 50
-  _explosionRadius: 3
+  _explosionRadius: 4
   _explosionForce: 20
   _explosion: {fileID: 114672352831882432}
   _explosionAudioSource: {fileID: 82168819649632374}

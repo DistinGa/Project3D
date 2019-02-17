@@ -7,10 +7,35 @@ namespace Geekbrains
 {
     public class Foe : BaseObjectScene, IDamagable, IEnemy
     {
-        public float HP = 100f;
+        public float _HP = 100f;
 
         private event Action OnDeath = () => { };
         private BaseBotRoutine[] _botRoutines;
+        private BotChasingTarget _chasingRoutine;
+        private float _maxHP;
+
+        public float HP
+        {
+            get { return _HP; }
+
+            set
+            {
+                _HP = value;
+
+                if (_HP <= 0)
+                {
+                    Death();
+                }
+
+                if (_HP > _maxHP)
+                {
+                    _HP = _maxHP;
+                }
+
+                if(_chasingRoutine != null)
+                    _chasingRoutine.IsHeeling = (HP < _maxHP * 0.5f);
+            }
+        }
 
         protected override void Awake()
         {
@@ -19,6 +44,7 @@ namespace Geekbrains
 
             _botRoutines = GetComponents<BaseBotRoutine>();
             _botRoutines = _botRoutines.OrderBy(a => a.Priority).ToArray();
+            _chasingRoutine = GetComponent<BotChasingTarget>();
         }
 
         private void Start()
@@ -41,9 +67,11 @@ namespace Geekbrains
             }
         }
 
-        public void Init(Action OnDeathMethod)
+        public void Init(Action OnDeathMethod, float maxHP = 100f)
         {
             OnDeath = OnDeathMethod;
+            _maxHP = maxHP;
+            HP = _maxHP;
         }
 
         public void ApplyDamage(float damage, Vector3 point, Vector3 force)
@@ -52,11 +80,6 @@ namespace Geekbrains
                 return;
 
             HP -= damage;
-
-            if (HP <= 0)
-            {
-                Death();
-            }
         }
 
         private void Death()

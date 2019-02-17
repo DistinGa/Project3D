@@ -4,7 +4,7 @@ namespace Geekbrains
 {
     public interface IEnemy
     {
-        void Init(Action OnDeath);
+        void Init(Action OnDeath, float maxHP);
         void OnUpdate();
     }
 }
