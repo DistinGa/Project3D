@@ -8,16 +8,20 @@ namespace Geekbrains
 		public Rigidbody Rigidbody { get; private set; }
 		public Transform Transform { get; private set; }
 		public int Layer
-		{
-			get => _layer;
-			set
-			{
-				_layer = value;
-				AskLayer(Transform, _layer);
-			}
-		}
+        {
+            get
+            {
+                return _layer;
+            }
 
-		private void AskLayer(Transform obj, int layer)
+            set
+            {
+                _layer = value;
+                AskLayer(Transform, _layer);
+            }
+        }
+
+        private void AskLayer(Transform obj, int layer)
 		{
 			obj.gameObject.layer = layer;
 			if (obj.childCount <= 0)return;
@@ -40,6 +44,12 @@ namespace Geekbrains
         /// <param name="value"></param>
         protected virtual void SetPhysics(bool value)
         {
+            if (Rigidbody == null)
+            {
+                gameObject.AddComponent<Rigidbody>();
+                Rigidbody = GetComponent<Rigidbody>();
+            }
+
             Rigidbody.isKinematic = !value;
             foreach (var item in GetComponents<Collider>())
             {

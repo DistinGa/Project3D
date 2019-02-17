@@ -1,0 +1,94 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
+
+namespace Geekbrains
+{
+    /// <summary>
+    /// Поиск и преследование цели.
+    /// </summary>
+    [RequireComponent(typeof(NavMeshAgent))]
+    public class BotChasingTarget : BaseBotRoutine
+    {
+        [SerializeField] private float VisionAngle = 30f;
+        [SerializeField] private float CloseDistance = 5f;
+        [SerializeField] private float FarDistance = 50f;
+        private NavMeshAgent _agent;
+        private Transform _playerTransform;
+
+        public bool IsHeeling { get; set; }
+
+        public override void Init()
+        {
+            _agent = GetComponent<NavMeshAgent>();
+
+            _playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+
+        public void Init(float VisionAngle, float CloseDistance, float FarDistance)
+        {
+            this.VisionAngle = VisionAngle;
+            this.CloseDistance = CloseDistance;
+            this.FarDistance = FarDistance;
+
+            Init();
+        }
+
+        public override bool Act()
+        {
+            if (_restDelayTime > 0)
+            {
+                _restDelayTime -= Time.deltaTime;
+                return false;
+            }
+
+            if (IsHeeling)
+            {
+                _agent.SetDestination(Main.Instance.HealthPacksController.GetNearestHealthPack(transform.position));
+            }
+            else
+            {
+                float _distanceToTarget = (_playerTransform.position - transform.position).magnitude;
+
+                if (_distanceToTarget <= CloseDistance)
+                    return TargetLock(_playerTransform.position);
+
+                if (_distanceToTarget <= FarDistance)
+                {
+                    if (Vector3.Angle(_playerTransform.position - transform.position, transform.forward) < VisionAngle * 0.5f)
+                    {
+                        RaycastHit hit;
+                        if (Physics.Linecast(transform.position, _playerTransform.position, out hit) && hit.collider.tag != "Player")
+                            // Есть препятствие на пути - цель как-будто не видна.
+                            return false;
+                        else
+                        {
+                            // Если цель близко к конечной точке расчитанного маршрута, маршрут не пересчитываем.
+                            if ((_agent.pathEndPosition - _playerTransform.position).magnitude < CloseDistance)
+                            {
+                                return true;
+                            }
+                            else
+                            {
+                                return TargetLock(_playerTransform.position);
+                            }
+                        }
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Построение маршрута до цели.
+        /// </summary>
+        /// <param name="targetPosition"></param>
+        /// <returns></returns>
+        private bool TargetLock(Vector3 targetPosition)
+        {
+            return _agent.SetDestination(targetPosition);
+        }
+    }
+}
